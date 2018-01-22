@@ -4,3 +4,7 @@
     <p><?=$posts['body'];?></p>
     <p><a href="/posts">All Posts ></a></p>
 </div>
+<hr>
+<?php echo form_open('/posts/delete/'.$posts['id'])?>
+<input type="submit" class="btn btn-danger" value="Delete">
+</form>

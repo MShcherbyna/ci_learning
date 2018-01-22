@@ -533,7 +533,8 @@ if ( ! function_exists('redirect'))
 	{
 		if ( ! preg_match('#^(\w+:)?//#i', $uri))
 		{
-			$uri = site_url($uri);
+			// $uri = site_url($uri);
+			$uri = $uri;
 		}
 
 		// IIS environment likely? Use 'refresh' for better compatibility

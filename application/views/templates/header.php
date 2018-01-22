@@ -18,12 +18,15 @@
 
 	<div class="collapse navbar-collapse" id="navbarColor01">
 		<ul class="navbar-nav mr-auto">
-		<li class="nav-item">
-			<a class="nav-link" href="/posts">Posts</a>
-		</li>
-		<li class="nav-item">
-			<a class="nav-link" href="/about">About</a>
-		</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/posts">Posts</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/create">Create Post</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="/about">About</a>
+			</li>
 		</ul>
 	</div>
   </div>

@@ -25,5 +25,31 @@ class Posts extends CI_Controller
         $this->load->view('templates/header');
         $this->load->view('posts/view',$data);
         $this->load->view('templates/footer');
-    }
+	}
+	
+	public function create() {
+		$data['title'] = 'Create Post';
+
+		$this->form_validation
+			->set_rules('title', 'Title', 'trim|required|min_length[5]|max_length[50]');
+		// $this->form_validation
+		// 	->set_rules('slug', 'Slug', 'trim|required|min_length[5]|max_length[12]');
+		$this->form_validation
+			->set_rules('body', 'Body', 'trim|required|min_length[5]');
+		
+		if($this->form_validation->run() === FALSE) {
+			$this->load->view('templates/header');
+			$this->load->view('posts/create',$data);
+			$this->load->view('templates/footer');
+		} else {
+			$this->post_model->set_post();
+			redirect('posts');
+		}
+		
+	}
+
+	public function delete($id) {
+		$this->post_model->delete_post($id);
+		redirect('/posts');
+	}
 }
