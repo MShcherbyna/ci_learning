@@ -5,6 +5,7 @@
     <p><a href="/posts">All Posts ></a></p>
 </div>
 <hr>
+<a class="btn btn-warning pull-left edit-btn" href="/posts/edit/<?=$posts['slug']?>">Edit</a>
 <?php echo form_open('/posts/delete/'.$posts['id'])?>
 <input type="submit" class="btn btn-danger" value="Delete">
 </form>

@@ -7,8 +7,8 @@
     <input type="text" class="form-control" name="title" id="exampleTitle" placeholder="Title">
   </div>
   <div class="form-group">
-    <label for="exampleBody">Body</label>
-    <textarea class="form-control" name="body" id="" cols="30" rows="10" placeholder="Add Body" ></textarea>
+    <label for="editor1">Body</label>
+    <textarea class="form-control" name="body" id="editor1" cols="30" rows="10" placeholder="Add Body" ></textarea>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

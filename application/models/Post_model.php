@@ -33,4 +33,17 @@ class Post_model extends CI_Model
 		$this->db->delete('posts');
 		return true;
 	}
+
+	public function update_post() {
+		$slug = lcfirst(url_title($this->input->post('title')));
+
+		$data = array(
+			'title' => $this->input->post('title'),
+			'slug' => $slug,
+			'body' => $this->input->post('body')
+		);
+
+		$this->db->where('id',$this->input->post('id'));
+		return $this->db->update('posts',$data);
+	}
 }
